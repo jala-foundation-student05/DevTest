@@ -37,7 +37,7 @@ function HomePage () {
         <Container>
 
             <Typography variant="h1" component="h2" style={{margin: '1rem'}}>
-                Contacs App
+                Contacts App
             </Typography>
 
             <Grid container alignItems="center">
