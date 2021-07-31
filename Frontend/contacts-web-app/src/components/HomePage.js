@@ -41,8 +41,8 @@ function HomePage () {
             </Typography>
 
             <Grid container alignItems="center">
-                <Grid item xs={2}/>
-                <Grid item xs={4}>
+                <Grid item xs={1} sm={2}/>
+                <Grid item xs={12} sm={4}>
                     <TextField 
                         id="search-field"
                         label="Search..."
@@ -54,7 +54,7 @@ function HomePage () {
                         }}
                     />
                 </Grid>
-                <Grid item xs={4}>
+                <Grid item xs={12} sm={4}>
                     <Button variant="contained" color="primary" onClick={() => 
                         setUsersFiltered(users.filter((user) => user.login.username.includes(search)))
                         }

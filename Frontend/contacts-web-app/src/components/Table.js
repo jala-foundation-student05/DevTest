@@ -2,13 +2,10 @@ import React from 'react';
 import { DataGrid } from '@material-ui/data-grid';
 
 const columns = [
-  { field: 'id', headerName: 'ID', width: 90,
-    type: 'string',
-  },
   {
     field: 'username',
     headerName: 'Username',
-    width: 100,
+    width: 180,
     valueGetter: (params) =>
       `${params.getValue(params.id, 'login').username}`,
   },
@@ -29,12 +26,12 @@ const columns = [
   {
     field: 'email',
     headerName: 'Email',
-    width: 150,
+    width: 250,
   },
   {
     field: 'location',
     headerName: 'Location',
-    width: 150,
+    width: 250,
     valueGetter: (params) =>
       `${params.row.location.city || ''} ${params.row.location.city && params.row.location.country ? ', ' : ''} ${
         params.row.location.country || ''
@@ -52,12 +49,11 @@ const rows = [
 export default function DataTable(props) {
 
     return (
-        <div style={{ height: 400, width: '100%' }}>
+        <div style={{ height: 700, width: '100%' }}>
         <DataGrid
             rows={props.data && props.data !==undefined ? props.data : rows}
             columns={columns}
             pageSize={15}
-            checkboxSelection
             disableSelectionOnClick
         />
         </div>
